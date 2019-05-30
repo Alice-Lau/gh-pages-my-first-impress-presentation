@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Impress JS</title>
+
+    <meta name="description"
+        content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="my-first-impress.css">
+</head>
+<body>
+
+    <div class="impress-not-supported">
+        <div class="fallback-message">
+            <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified
+                version of this presentation.</p>
+            <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <nav>
+            <ul>
+                <li><a aria-label="Go to slide overview" href="#overview">O</a></li>
+                <li><a aria-label="Go to slide #1." href="#circle-1">1</a></li>
+                <li><a aria-label="Go to slide #2." href="#circle-2">2</a></li>
+                <li><a aria-label="Go to slide #3." href="#circle-3">3</a></li>
+                <li><a aria-label="Go to slide #4." href="#circle-4">4</a></li>
+                <li><a aria-label="Go to slide #5." href="#circle-5">5</a></li>
+                <li><a aria-label="Go to slide #6." href="#circle-6">6</a></li>
+                <li><a aria-label="Go to slide #7." href="#transition">7</a></li>
+                <li><a aria-label="Go to slide #8." href="#box-1">8</a></li>
+                <li><a aria-label="Go to slide #9." href="#box-2">9</a></li>
+                <li><a aria-label="Go to slide #10." href="#box-3">10</a></li>
+                <li><a aria-label="Go to slide #11." href="#box-4">11</a></li>
+                <li><a aria-label="Go to slide #12." href="#box-5">12</a></li>
+                <li><a aria-label="Go to slide #13." href="#box-6">13</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- <div id="impress">
+
+        <div id="step-1" class="step"></div>
+
+        <div id="step-2" class="step"></div>
+
+        <div id="step-3" class="step"></div>
+
+    </div> -->
+
+    <div id="impress" class="impress-canvas" data-autoplay=false>
+
+        <div id="circle-1" class="step slide" data-x="668" data-y="-349" data-rotate="0" data-scale="1">
+            <h1>impress.js</h1>
+
+            <div class="notes">
+                <p>Hello, my name is Alice.</p>
+                <p>Today, I am here to share with y’all what I have learnt about Impress.js.</p>
+            </div>
+        </div>
+
+        <div id="circle-2" class="step slide" data-x="96" data-y="639" data-rotate="60" data-scale="1">
+            <h2>What's impress.js</h2>
+            <p>A Javascript framework for creating customized, unique looking presentation slides.</p>
+            
+            <div class="notes">
+                <p>It is a JavaScript framework for creating customized, unique looking presentation slides.</p>
+                <p>To give you a better understanding about how it work and how it actually look like,</p>
+                <p>I have created my current presentation using the framework itself.</p>
+            </div>
+        </div>
+
+        <div id="circle-3" class="step slide" data-x="-1046" data-y="639" data-rotate="120" data-scale="1">
+            <h2>Origin</h2>
+            <div class="creators">
+                <div class="bartek">
+                    <img src="assets/bartek-szopka.png" alt="The Twitter portrait of Bartek Szopka.">
+                    <p>Bartek Szopka</p>
+                </div>
+                <div class="ingo">
+                    <img src="assets/henrik-ingo.jpg" alt="The Twitter portrait of Henrik Ingo.">
+                    <p>Henrik Ingo</p>
+                </div>
+            </div>
+            <p><span class="side-note">Portraits from Creators' Twitter Account</span></p>
+
+            <div class="notes">
+                <p>The framework was invented and mainly worked on by 2 creative and talented individuals shown on the slide</p>
+                <p>between 2011 to 2018</p>
+                <p>Development and plugins for the framework is still ongoing till this day by the open community.</p>
+            </div>
+        </div>
+
+        <div id="circle-4" class="step slide" data-x="-1618" data-y="-350" data-rotate="180" data-scale="1">
+            <h2>Inspiration of the idea</h2>
+
+            <p>The framework was inspired by Prezi</p>
+
+            <div class="prezi-gif">
+                <img src="assets/prezi.gif" alt="Demonstration of a prezi presentation workflow.">
+            </div>
+
+            <div class="comparison">
+                <div class="prezi">
+                    <h3>Prezi</h3>
+                    <ul>
+                        <li>flash</li>
+                        <li>fee required for ownership of presentation</li>
+                    </ul>
+                </div>
+                <div class="impress">
+                    <h3>Impress.js</h3>
+                    <ul>
+                        <li>CSS transform, transition, & animations</li>
+                        <li>completely FREE</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="notes">
+                <p>The original idea was inspired by Prezi.</p>
+                <p>If you are not familiar with the presentation software, here’s a gif demonstrating how it looks like.</p>
+                <p>The main differences between Prezi and Impress.js are that Prezi uses flash (an external plug in), while Impress.js utilizes CSS transform, transition, and 3D animations.</p>
+                <p>Also, Impress.js is completely FREE!!!</p>
+            </div>
+        </div>
+
+        <div id="circle-5" class="step slide cross-browser" data-x="-1046" data-y="-1339" data-rotate="240" data-scale="1">
+            <h2>Cross-Browser Support</h2>
+            <ul>
+                <li>Internet Explorer 10+</li>
+                <li>Firefox 10+</li>
+                <li>Chrome</li>
+                <li>Safari</li>
+                <li>only know exception: Opera Mini</li>
+            </ul>
+
+            <h3>Solution</h3>
+            <div class="no-impress">
+                <img src="assets/fallback-message.png" alt="HTML specification when browser does not support impress.js.">
+                <ul>
+                    <li>adding a div with class "impress-not-support"</li>
+                    <li>adding a div with class "fallback-message"</li>
+                </ul>
+            </div>
+
+            <div class="notes">
+                <p>Impress is supported across most updated versions of popular browsers.</p>
+                <p>One known exception is opera mini.</p>
+                <p>However, users on unsupported browsers can still view an unanimated version of the presentation</p>
+                <p>if we include div with class of "impress-not-support" and "fallback-message" at the beginning of the HTML.</p>
+            </div>
+        </div>
+
+        <div id="circle-6" class="step slide adding-script" data-x="96" data-y="-1339" data-rotate="300" data-scale="1">
+            <h2>How to make an Impress.js Presentation?</h2>
+
+            <ol>
+                <li>
+                    <p>download the impress.js script file</p>
+                </li>
+                <li>
+                    <p>link the external script to our html file</p>
+                </li>
+                <li>
+                    <p>initiate the script</p>
+                </li>
+            </ol>
+
+            <div class="external-script">
+                <img src="assets/external-script.png" alt="visual guild of where to place our external impress.js script">
+            </div>
+
+            <div class="notes">
+                <p>Let move onto the main construction of Impress.</p>
+                <p>First, we will have to download Impress JavaScript file and save it in our presentation folder.</p>
+                <p>In our HTML we also have to include external link to the js file, as well as initiate the Javascript using the init
+                function.</p>
+            </div>
+        </div>
+
+        <div id="transition" class="step slide" data-x="-475" data-y="-350" data-z="1000" data-scale="1">
+            <h2>The Main HTML Structure</h2>
+            
+            <ol>
+                <li>
+                    <p>create a div with an id "impress"</p>
+                </li>
+                <li>
+                    <p>create internal div with the class "step" inside "impress" to indicate individual slide</p>
+                </li>
+            </ol>
+            
+            <div class="main-html">
+                <img src="assets/basic-html-setup-2.png" alt="Main html structure of impress presentation.">
+            </div>
+            
+            <div class="notes">
+                <p>Now, onto the visible part of the presentation.</p>
+                <p>We would create a div with an id of impress, within which we places each of our individual slides. The slide
+                    should all have the class named step.</p>
+                <p>Other than these 2 requirement, we basically style our slide the same as normal webpages.</p>
+                <p>Next slide is the fun part, where we finally come to the part in customizing the transitions of our slides.</p>
+            </div>
+        </div>
+
+        <div id="box-1" class="step slide" data-x="-475" data-y="-350" data-z="-1000" data-scale="1">
+            <h2>Customizing the Transition</h2>
+
+            <div class="customizing-slide-transition">
+                <img src="assets/customizing-slide-transition.png" alt="visual guide on inputing slide transition information.">
+            </div>
+
+            <p>There are a total of 8 attributes that can be used for each "step" (or slide div)</p>
+            <p>We can simply add the attributes into the div tag in any combination</p>
+
+            <div class="effect-table">
+                <div>
+                    <h3>2D Effects</h3>
+                    <ul>
+                        <li>data-x: left/right</li>
+                        <li>data-y: up/down</li>
+                        <li><span class="same-visual-effect">data-rotation</span></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>3D Effects</h3>
+                    <ul>
+                        <li>data-rotation-x</li>
+                        <li>data-rotation-y</li>
+                        <li><span class="same-visual-effect">data-rotation-z</span></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Other Effects</h3>
+                    <ul>
+                        <li>data-z: forward/backward</li>
+                        <li>scale: zooming in/out</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p><em class="side-note">data-rotation & data-rotation-z result in same visual effect in most cases.</em></p>
+
+            <div class="notes">
+                <p>As shown in the code demonstration, Impress.js document recommended us to place our specification inside the html element tag</p>
+                <p>There are a total of 7, argueably 8 attributes that we can use in any combination we want.</p>
+                <p>For 2D Effect, we have data-x, which moves the slide left/right; data-y, which moves the slide up/down; and data-rotation, which turn the slide clockwise/counter-clockwise along a 2D plane</p>
+                <p>I am going to skip over the 3D effects for now, as I will explain them in more detail in following slides</p>
+                <p>For other effects, data-z represent the perspective value, which move the slide forward/closer to the user, the larger the value, and backward/further away from the user, the smaller the value</p></p>
+            </div>
+        </div>
+
+        <div id="box-2" class="step slide rotation-3d" data-x="-25" data-y="-350" data-z="-1450" data-rotate-y="90" data-scale="1">
+            <h2>Data-Rotation-X</h2>
+
+            <p>The numeric input in all rotation data represent a degree value.</p>
+            <p>data-rotation-x spins a slide along a horizontal axis (stetching from east to west).</p>
+            <a href="http://www.innovativephp.com/demo/impress-js-demos/chapter2/data-rotate-x.html#/slide1" aria-label="A visual demo of data-rotation-x being applied to an impress.js presentation slide.">see demo</a>
+        </div>
+
+        <div id="box-3" class="step slide rotation-3d" data-x="-475" data-y="-350" data-z="-1900" data-rotate-y="180" data-scale="1">
+            <h2>Data-Rotation-Y</h2>
+            
+            <p>data-rotation-y spins a slide along a vertical axis.</p>
+            <a href="http://www.innovativephp.com/demo/impress-js-demos/chapter2/data-rotate-y.html#/slide1"
+                aria-label="A visual demo of data-rotation-x being applied to an impress.js presentation slide.">see demo</a>
+        </div>
+
+        <div id="box-4" class="step slide rotation-3d" data-x="-925" data-y="-350" data-z="-1450" data-rotate-y="270" data-scale="1">
+            <h2>Data-Rotation-Z</h2>
+
+            <p>data-rotation-z spins a slide along a horizontal axis (stretching from north to south).</p>
+            <a href="http://www.innovativephp.com/demo/impress-js-demos/chapter2/data-rotate-z.html#/slide1"
+                aria-label="A visual demo of data-rotation-x being applied to an impress.js presentation slide.">see demo</a>
+        </div>
+
+        <div id="box-5" class="step slide special-css-classes" data-x="-475" data-y="-700" data-z="-1450" data-rotate-y="360" data-rotate-x="90" data-scale="1">
+            <h2>Styling</h2>
+            <ol>
+                <li><p>class="past"</p></li>
+                <li><p>class="future"</p></li>
+                <li><p>class="active"</p></li>
+            </ol>
+
+            <h2>Additional Plugins & Tools</h2>
+
+            <div class="plugins">
+                <div>
+                    <img src="assets/presenter-note.png" alt="Persenter note interface.">
+                </div>
+                <div>
+                    <img src="assets/slide-navigation.png" alt="Presentation navigtaion bar">
+                </div>
+                <div>
+                    <a href="http://qti3e.github.io/Imprezi/#/step-1">
+                        <img src="assets/imprezi.png" alt="Imprezi slide generator.">
+                    </a>
+                </div>
+                <div>
+                    <a href="http://wmh.github.io/circular-slides-generator/">
+                        <img src="assets/circular-slides-generator.png" alt="Circular slide generator.">
+                    </a>
+                </div>
+            </div>
+
+            <div class="notes">
+                <p>Most CSS styling are the same as how we would normally write them for typical webpages</p>
+                <p>However, there're 3 special classes created by impress.js</p>
+                <p>The "past" and "future" class represents slides before or after the current slide. Usually we will give it an opacity less than 1 to make the slides look translucent. While the active slide will recieve an opacity of 1</p>
+                <p>These classes are changed dynamically by impress.js script.</p>
+            </div>
+        </div>
+
+        <div id="box-6" class="step slide pros-cons" data-x="-475" data-y="0" data-z="-1400" data-rotate-y="540" data-rotate-x="90" scale="1">
+            <h2>Pros & Cons</h2>
+            <ul class="pros">
+                <li>
+                    <p>offers presenter endless possbility in customizing their presentation</p>
+                </li>
+                <li>
+                    <p>more control over accessibility issues</p>
+                </li>
+                <li>
+                    <p>presentation is not software dependent</p>
+                </li>
+                <li>
+                    <p>dynamic contents are more robust across devices</p>
+                </li>
+            </ul>
+
+            <ul class="cons">
+                <li>
+                    <p>the visual aspect should be use meaningfully</p>
+                </li>
+                <li>
+                    <p>avoid overwhelming the viewer</p>
+                </li>
+            </ul>
+
+            <div class="notes">
+                <p></p>
+            </div>
+
+        </div>
+
+        <div id="overview" class="step overview" data-x="-475" data-y="-350" data-z="0" data-scale="5" data-rotate-x="" data-rotate-y="" data-rotate-z="" data-autoplay=false>
+        </div>
+    </div>
+
+    <div id="impress-toolbar" class="impress-toolbar"></div>
+    
+
+    <script src="js/impress.js"></script>
+
+    <script>impress().init();</script>    
+</body>
+</html>
