@@ -43,11 +43,11 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 p {
@@ -55,6 +55,11 @@ p {
     font-size: 1.3rem;
     line-height: 2rem;
     text-align: center;
+}
+
+em {
+    display: block;
+    font-weight: bold;
 }
 
 ul p,
@@ -125,20 +130,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-}
-
-.creators {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.creators div {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.side-note {
-    font-size: 0.8rem;
 }
 
 .prezi-gif {
